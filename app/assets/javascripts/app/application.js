@@ -1,17 +1,11 @@
 //= require jquery_ujs
-//= require ../libs/bootstrap
+//= require jquery.ui.all
+//= require chosen-jquery
+//= require twitter/bootstrap
 //= require ../libs/underscore-min
-//= require ../libs/chosen.jquery.min
-//= require ../libs/jquery-ui-1.8.17.custom.min
 //= require ../libs/jquery.hotkeys
 //= require ../libs/request-interval
 //= require ./team-list
-
-// usage: log('inside coolFunc', this, arguments);
-window.log = function f(){ log.history = log.history || []; log.history.push(arguments); if(this.console) { var args = arguments, newarr; args.callee = args.callee.caller; newarr = [].slice.call(args); if (typeof console.log === 'object') log.apply.call(console.log, console, newarr); else console.log.apply(console, newarr);}};
-
-(function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
-(function(){try{console.log();return window.console;}catch(a){return (window.console={});}}());
 
 var APP = (function($) {
     var app = {
@@ -63,7 +57,7 @@ var APP = (function($) {
                 .appendTo(ul);
         };
         $search.autocomplete({ select:onSearchSelect, source:'/search' });
-        
+
         $('a[rel=tooltip]').tooltip({
             placement:'bottom'
         });

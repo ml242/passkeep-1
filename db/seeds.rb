@@ -7,17 +7,11 @@ if Rails.env.development?
   puts "-------------------------------------------------------------------------------"
 
   require 'factory_girl'
-
-  if Rails.env.development?
-    FactoryGirl.definition_file_paths = [File.join(Rails.root.to_s, 'spec', 'factories')]
-    FactoryGirl.find_definitions
-  end
-
   # Users
-  u = Factory(:user, email: 'admin@passkeep.com', super_user: true)
+  u = FactoryGirl.create(:user, email: 'admin@passkeep.com', super_user: true)
   puts "created #{u.email}"
 
-  Factory(:team, name: "Master", user_ids: [u.id], master: true)
+  FactoryGirl.create(:team, name: "Master", user_ids: [u.id], master: true)
 =begin
   p1 = Factory(:project)
   puts "Added a project"

@@ -6,6 +6,7 @@ gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on.
 gem 'attr_encrypted'
 gem 'capistrano'
 gem 'cancan'
+gem 'chosen-rails'
 gem 'daemons'
 gem 'delayed_job_active_record'
 gem 'devise'
@@ -19,6 +20,10 @@ gem 'rack-cache', require: 'rack/cache'
 gem 'settingslogic'
 gem 'will_paginate'
 gem 'uuidtools'
+
+gem 'jquery-ui-rails'
+
+gem "twitter-bootstrap-rails"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

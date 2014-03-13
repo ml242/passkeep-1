@@ -1,15 +1,15 @@
 /*
- *= require bootstrap
- *= require_self
- *= require custom-file
- *= require chosen
- *= require autocomplete
- *= require teams
- *= require index_list
- *= require entries
- *= require projects
- *= require users
- *= require print
+  *= require bootstrap_and_overrides
+  *= require_self
+  *= require jquery.ui.all
+  *= require custom-file
+  *= require autocomplete
+  *= require teams
+  *= require index_list
+  *= require entries
+  *= require projects
+  *= require users
+*= require print
 */
 @import 'mixins';
 /* HTML5 display definitions */
